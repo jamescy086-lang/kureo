@@ -1,39 +1,27 @@
+
 <?php
-$conn = mysqli_connect("https://kureo.infinityfreeapp.com", "your_db_user", "your_db_pass", "kureo_db4");
+$conn = mysqli_connect("localhost","root","","kureo_db4");
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// --- GET FORM DATA ---
-$name = $_POST['name'] ?? '';
-$email = $_POST['email'] ?? '';
-$phone = $_POST['phone'] ?? '';
-$item = $_POST['item'] ?? '';
-$size = $_POST['size'] ?? '';
-$quantity = $_POST['quantity'] ?? '';
-$address = $_POST['address'] ?? '';
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$item = $_POST['item'];
+$size= $_POST['size'];
+$quantity = $_POST['quantity'];
+$address = $_POST['address'];
 
-// --- VALIDATION ---
-if(empty($name) || empty($email) || empty($item) || empty($quantity)) {
-    die("Please fill all required fields.");
-}
+$sql = "INSERT INTO orders (name, email, phone, item, quantity,size, address)
+VALUES ('$name', '$email', '$phone', '$item', '$quantity','$size', '$address')";
 
-// --- INSERT ORDER USING PREPARED STATEMENT ---
-$stmt = $conn->prepare(
-    "INSERT INTO orders (name, email, phone, item, quantity, size, address) 
-    VALUES (?, ?, ?, ?, ?, ?, ?)"
-);
-$stmt->bind_param("ssssiss", $name, $email, $phone, $item, $quantity, $size, $address);
-
-if($stmt->execute()) {
-    // Redirect to a thank you page
+if ($conn->query($sql) === TRUE) {
     header("Location: done.html");
-    exit;
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $conn->error;
 }
 
-$stmt->close();
 $conn->close();
 ?>
