@@ -1,11 +1,6 @@
 <?php
-// --- DATABASE CONNECTION ---
-$host = "https://kureo.vercel.app/";       // e.g., db1234.000webhost.com
-$user = "kureo123";          // e.g., user1234
-$password = "admin123";      // e.g., pass1234
-$dbname = "kureo_db4";            // your database name
+$conn = mysqli_connect("sql123.epizy.com", "your_db_user", "your_db_pass", "kureo_db4");
 
-$conn = mysqli_connect($host, $user, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
