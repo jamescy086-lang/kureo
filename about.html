@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Kureo</title>
+    <link rel="stylesheet" href="my.css">
+</head>
+
+<body>
+
+<div class="light"></div>
+
+<nav class="navbar">
+    <button onclick="window.location.href='home.html'">Home</button>
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='shop.html'">Shop</button>
+</nav>
+
+<section class="about">
+    <h1>About Kureo</h1>
+
+    <p class="tagline">More than clothing. A statement.</p>
+
+    <div class="content">
+        <p>
+            Kureo is built for individuals who move differently — those who value style,
+            confidence, and presence. Every piece is designed with precision, combining
+            minimal aesthetics with bold identity.
+        </p>
+
+        <p>
+            Our collections are not just fashion — they are expressions of mindset.
+            Limited releases ensure exclusivity, making every item a part of something rare.
+        </p>
+
+        <p>
+            Kureo represents discipline, ambition, and the drive to stand out without
+            saying a word.
+        </p>
+    </div>
+
+    <a href="shop.html" class="btn">Explore Collection</a>
+    <br> <br>
+</section>
+
+
+
+
+
+<script>
+document.addEventListener("mousemove", (e) => {
+    const light = document.querySelector(".light");
+    light.style.left = e.clientX + "px";
+    light.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>

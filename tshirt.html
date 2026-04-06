@@ -1,0 +1,268 @@
+<!DOCTYPE>
+
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="my.css">
+     <style>
+       /* CENTER */
+       body {
+display:block;
+}
+    .collection-title {
+    width: 100%;
+    text-align: center;
+    margin: 40px 0 60px 0;
+     font-size: 2.5rem;
+    margin-bottom: 120px;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.shop-now {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+.shop-now a {
+    display: inline-block;
+    padding: 15px 40px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.shop-now a {
+    padding: 15px 40px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.shop-now a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+.category {
+    padding: 80px 40px;
+}
+
+.category h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: gold;
+     font-size: 2.5rem;
+    margin-bottom: 120px;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+/* GRID */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+/* IMAGE */
+.card img {
+    width: 500px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.card:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px gold);
+}
+
+/* DETAILS */
+.details {
+    margin-top: 10px;
+}
+
+/* SIZE BUTTON */
+.size-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: none;
+    background: gold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* SIZE CHART */
+.size-chart {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
+
+.size-btn:hover + .size-chart {
+    opacity: 1;
+    transform: translateY(0);
+}
+     </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="collection-title">Kureo Collection</h1>
+
+
+
+   <section class="category">
+<h2>Shirts</h2>
+
+<div class="shop-grid">
+
+<div class="card">
+<img src="shirt1.png">
+<h3>Drop Shoulder Tee - Classic Black</h3>
+
+<div class="details">
+
+<p>Organic Cotton</p>
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 48cm<br>
+M - 52cm<br>
+L - 56cm<br>
+XL - 60cm
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="shirt2.png">
+<h3>Drop Shoulder Tee - Classic White</h3> 
+
+<div class="details">
+
+<p>Supima Cotton</p>
+
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 48cm<br>
+M - 52cm<br>
+L - 56cm<br>
+XL - 60cm
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="shirt3.png">
+<h3>Drop Shoulder Tee - Stone Gray</h3>
+
+<div class="details">
+
+<p>Combed Ring-Spun Cotton</p>
+
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 48cm<br>
+M - 52cm<br>
+L - 56cm<br>
+XL - 60cm
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="category">
+<h2>Hoodies</h2>
+
+<div class="shop-grid">
+
+<div class="card">
+<img src="hoodie.png">
+<h3>Hoodie - Soft Pink</h3>
+
+<div class="details">
+<p>French Terry</p>
+
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 52cm<br>
+M - 56cm<br>
+L - 60cm<br>
+XL - 64cm
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="hoodie2.png">
+<h3>Hoodie - Powder Blue</h3>
+
+<div class="details">
+<p>Fleece</p>
+
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 52cm<br>
+M - 56cm<br>
+L - 60cm<br>
+XL - 64cm
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="hoodie3.png">
+<h3>Hoodie - Soft Beige</h3>
+
+<div class="details">
+<p>Tri-Blend Fleece</p>
+
+
+
+<button class="size-btn">Size Chart</button>
+
+<div class="size-chart">
+S - 52cm<br>
+M - 56cm<br>
+L - 60cm<br>
+XL - 64cm
+</div>
+</div>
+</div>
+
+</div>
+</section>
+    <div class="shop-now">
+    <a href="shop.html">Shop Now</a>
+</div>
+</body>
+</html>
