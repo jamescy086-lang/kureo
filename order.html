@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Kureo Pre-Order</title>
-     <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="my.css">
 </head>
 <body>
 <div class="light"></div>
 
-
-
 <section class="order-form">
-    <form action="https://myorders.000webhostapp.com/submit_order.php" method="POST">
-    <h2>Order now Your Kureo Collection</h2>
+    <form action="https://kureo.infinityfreeapp.com/submit_order.php" method="POST">
+        <h2>Order now Your Kureo Collection</h2>
 
-    <form action="submit_order.php" method="POST">
         <!-- Name -->
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required placeholder="Name">
@@ -38,13 +35,14 @@
             <option value="Blue_H">Kureo Blue Hoodie - ₱1000</option>
             <option value="Beige_H">Kureo Beige Hoodie - ₱1000</option>
         </select>
+
+        <!-- Size Selection -->
         <label for="size">Select Size</label>
         <select id="size" name="size" required>
             <option value="">--Sizes--</option>
             <option value="Small">Small</option>
-            <option value="Mediun">Medium</option>
+            <option value="Medium">Medium</option>
             <option value="Large">Large</option>
-            
         </select>
 
         <!-- Quantity -->
@@ -56,15 +54,9 @@
         <textarea id="address" name="address" rows="3" placeholder="Street, City, Province, Country" required></textarea>
 
         <!-- Submit -->
-        
-  <button type="submit" class=" " onclick="window.location.href='done.html'">Order Now</button>
-
-
-        </form>
-
-
-   
-
+        <button type="submit">Order Now</button>
+    </form>
+</section>
 
 <script>
 document.addEventListener("mousemove", (e) => {
@@ -72,8 +64,6 @@ document.addEventListener("mousemove", (e) => {
     light.style.left = e.clientX + "px";
     light.style.top = e.clientY + "px";
 });
-
-
 </script>
 </body>
 </html>
