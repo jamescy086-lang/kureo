@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("sql123.epizy.com", "your_db_user", "your_db_pass", "kureo_db4");
+$conn = mysqli_connect("https://kureo.infinityfreeapp.com", "your_db_user", "your_db_pass", "kureo_db4");
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
